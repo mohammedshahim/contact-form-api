@@ -24,5 +24,6 @@ app.use(function (req, res, next) {
   next();
 });
 
+// Run server in port
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, console.log(`Server running on port ${PORT}`));
