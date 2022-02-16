@@ -1,11 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Table, Container, Row, Col, Button } from "react-bootstrap";
 import DeleteModal from "../Componets/List/DeleteModal";
 import EditModal from "../Componets/List/EditModal";
+import api from "../config/api";
 
 const List = () => {
   const [deleteModal, setDeleteModal] = useState(false);
   const [editModal, setEditModal] = useState(false);
+
+  const getAllForms = async () => {
+    const res = await api.get("/form");
+    console.log(res.data);
+  };
+
+  useEffect(() => {
+    getAllForms();
+  }, []);
+
   return (
     <>
       <Container className="mt-5">
