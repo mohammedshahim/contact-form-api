@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Modal } from "react-bootstrap";
 
-const DeleteModal = ({ deleteModal, setDeleteModal }) => {
+const DeleteModal = ({ deleteModal, setDeleteModal, deleteHandler }) => {
   return (
     <>
       <Modal show={deleteModal} onHide={() => setDeleteModal(!deleteModal)}>
@@ -16,7 +16,13 @@ const DeleteModal = ({ deleteModal, setDeleteModal }) => {
           >
             Close
           </Button>
-          <Button variant="danger" onClick={() => setDeleteModal(!deleteModal)}>
+          <Button
+            variant="danger"
+            onClick={() => {
+              deleteHandler();
+              setDeleteModal(!deleteModal);
+            }}
+          >
             Delete
           </Button>
         </Modal.Footer>

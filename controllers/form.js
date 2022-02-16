@@ -6,7 +6,7 @@ const Form = require("../models/form");
  * @access  Public
  */
 exports.getAllForms = async (req, res, next) => {
-  const forms = await Form.find();
+  const forms = await Form.find().sort({ createdAt: -1 });
 
   let msg = "Forms fetched successfully";
   return res.json({ success: true, message: msg, data: forms });

@@ -56,7 +56,7 @@ const ContactForm = () => {
                       <Form.Label>Last Name</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter email"
+                        placeholder="Enter last name"
                         onChange={(e) =>
                           setDetails({ ...details, lastName: e.target.value })
                         }
@@ -68,7 +68,7 @@ const ContactForm = () => {
                       <Form.Label>Email</Form.Label>
                       <Form.Control
                         type="email"
-                        placeholder="Enter first name"
+                        placeholder="Enter email"
                         onChange={(e) =>
                           setDetails({ ...details, email: e.target.value })
                         }
