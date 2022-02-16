@@ -12,4 +12,4 @@ const Form = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("form", Form);
+module.exports = mongoose.model("Form", Form);

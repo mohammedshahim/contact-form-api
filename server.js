@@ -24,6 +24,12 @@ app.use(function (req, res, next) {
   next();
 });
 
+// Route files
+const form = require("./routes/form");
+
+// Mount routers
+app.use("/api/v1/form", form);
+
 // Run server in port
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, console.log(`Server running on port ${PORT}`));
